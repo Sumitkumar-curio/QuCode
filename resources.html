@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Computing Resources | Qu Code</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('images/learning.png'); /* Replace 'background.png' with your image file */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+    header, footer {
+      background-color: rgba(28, 28, 28, 0.8); /* Semi-transparent background */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    header.dark-mode, footer.dark-mode {
+      background-color: #1f1f1f;
+    }
+    .navbar {
+      background-color: rgba(28, 28, 28, 0.8); /* Semi-transparent background */
+      padding: 15px;
+      color: white;
+    }
+    .navbar.dark-mode {
+      background-color: #1f1f1f;
+    }
+    .navbar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .navbar li {
+      margin: 0 20px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      color: black;
+      margin: 50px 0 20px;
+    }
+    .section-title.dark-mode {
+      color: white;
+    }
+    .resource-category {
+      margin-bottom: 40px;
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .resource-category.dark-mode {
+      background-color: rgba(34, 34, 34, 0.9);
+    }
+    .resource-category h3 {
+      font-size: 28px;
+      color: #1c1c1c;
+    }
+    .resource-category.dark-mode h3 {
+      color: white;
+    }
+    .resource-category ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+    .resource-category li {
+      margin: 10px 0;
+    }
+    .resource-category a {
+      text-decoration: none;
+      color: #0066cc;
+      font-size: 18px;
+    }
+    .resource-category a:hover {
+      text-decoration: underline;
+    }
+    .resource-category img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .footer p {
+      margin: 10px 0;
+    }
+
+    /* Blog Post Section Styling */
+    #blog-posts {
+      margin-top: 50px;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card.dark-mode {
+      background-color: #2a2a2a;
+      color: white;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .card-title.dark-mode {
+      color: white;
+    }
+    .card-text {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .card-text.dark-mode {
+      color: white;
+    }
+    .card-footer {
+      text-align: right;
+      font-size: 14px;
+      color: #777;
+    }
+    .card-footer.dark-mode {
+      color: #bbb;
+    }
+    .btn-primary {
+      background-color: #0066cc;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .btn-primary:hover {
+      background-color: #005bb5;
+      color: white;
+    }
+
+    /* Blog Post Grid */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    .col {
+      width: calc(50% - 15px);
+      margin-bottom: 30px;
+    }
+    @media (max-width: 768px) {
+      .col {
+        width: 100%;
+      }
+    }
+
+    /* Dark Mode Toggle Button */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #333;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Dark Mode Toggle Button -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Qu Code</a>
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Resources Section -->
+  <section id="resources">
+    <div class="container">
+      <h2 class="section-title">Quantum Computing Resources</h2>
+
+      <!-- Videos Section -->
+      <div class="resource-category">
+        <h3>Videos</h3>
+        <ul>
+          <li>
+            <a href="https://www.youtube.com/watch?v=JhHMJCUmq28&t=4s" target="_blank">Quantum computers explained by Kurtzgesagt</a>
+            <img src="https://i.ytimg.com/vi/JhHMJCUmq28/hqdefault.jpg" alt="Quantum computers explained by Kurtzgesagt">
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=-UlxHPIEVqA" target="_blank">The map of quantum computing by D. Walliman</a>
+            <img src="https://i.ytimg.com/vi/-UlxHPIEVqA/hqdefault.jpg" alt="The map of quantum computing by D. Walliman">
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=QuR969uMICM&t=101s" target="_blank">A beginner’s guide to quantum computing by S. Ghose</a>
+            <img src="https://i.ytimg.com/vi/QuR969uMICM/hqdefault.jpg" alt="A beginner’s guide to quantum computing by S. Ghose">
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=OWJCfOvochA" target="_blank">Quantum computing on 5 levels of difficulty by IBM</a>
+            <img src="https://i.ytimg.com/vi/OWJCfOvochA/hqdefault.jpg" alt="Quantum computing on 5 levels of difficulty by IBM">
+          </li>
+        </ul>
+      </div>
+
+      <!-- Books Section -->
+      <div class="resource-category">
+        <h3>Popular Science Books</h3>
+        <ul>
+          <li><a href="https://www.goodreads.com/book/show/2330343.Quantum_Theory_Cannot_Hurt_You" target="_blank">Quantum Theory Cannot Hurt You</a></li>
+          <li><a href="https://www.goodreads.com/book/show/8243716-how-to-teach-quantum-physics-to-your-dog" target="_blank">How to Teach Quantum Physics to Your Dog</a></li>
+        </ul>
+      </div>
+
+      <!-- Learning Platforms Section -->
+      <div class="resource-category">
+        <h3>Learn While Playing</h3>
+        <ul>
+          <li><a href="https://qplaylearn.com/" target="_blank">QPlayLearn - Free Quantum Games and Resources</a></li>
+          <li><a href="https://arxiv.org/abs/2202.07756" target="_blank">Quantum Games and Interactive Tools for Quantum Technologies Education</a></li>
+          <li><a href="https://play.quantumgame.io/" target="_blank">Quantum Game with Photons</a></li>
+        </ul>
+      </div>
+
+      <!-- Articles Section -->
+      <div class="resource-category">
+        <h3>Articles</h3>
+        <ul>
+          <li><a href="https://www.newscientist.com/question/what-is-a-quantum-computer/" target="_blank">What is a Quantum Computer? (New Scientist)</a></li>
+          <li><a href="https://www.technologyreview.com/2019/01/29/66141/what-is-quantum-computing/" target="_blank">What is Quantum Computing? (MIT Technology Review)</a></li>
+        </ul>
+      </div>
+
+      <!-- Courses Section -->
+      <div class="resource-category">
+        <h3>Quantum Computing Courses</h3>
+        <ul>
+          <li><a href="https://www.edx.org/professional-certificate/delftx-quantum-computing-and-quantum-internet" target="_blank">Quantum Computing and Quantum Internet (DelftX - edX)</a></li>
+          <li><a href="https://www.edx.org/course/fundamentals-of-quantum-information" target="_blank">Fundamentals of Quantum Information (edX)</a></li>
+        </ul>
+      </div>
+
+      <!-- Quantum Career Resources Section -->
+      <div class="resource-category">
+        <h3>Career Resources</h3>
+        <ul>
+          <li><a href="https://jobs.quantumdelta.nl/jobs" target="_blank">Quantum Delta Jobs Portal</a></li>
+          <li><a href="https://qureca.com/" target="_blank">Qureca - Education and Careers in Quantum</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recent Blog Posts Section -->
+  <section id="blog-posts">
+    <h2 class="section-title">Recent Posts</h2>
+    <div class="row">
+      <!-- Blog Post 1: Top 5 Quantum Computing Companies -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Top 5 Quantum Computing Companies You Should Know About</h5>
+            <p class="card-text">These companies are at the forefront of the quantum revolution, pushing the boundaries of computation. Learn about their breakthroughs in quantum hardware, software, and applications.</p>
+            <a href="https://www.forbes.com/sites/technology/article/top-quantum-computing-companies/" class="btn btn-primary" target="_blank">Read More</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 26, 2025
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 2: Top 5 Universities with Quantum Courses -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Top 5 Universities Offering Quantum Computing Courses</h5>
+            <p class="card-text">Explore the best universities worldwide that offer cutting-edge quantum computing courses and research programs. These institutions are shaping the next generation of quantum scientists.</p>
+            <a href="https://thequantuminsider.com/2022/04/18/the-worlds-top-12-quantum-computing-research-universities/" class="btn btn-primary" target="_blank">Explore More</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 25, 2025
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 3: Quantum Computing Startups -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Emerging Quantum Computing Startups to Watch</h5>
+            <p class="card-text">Learn about the startups that are pioneering new quantum technologies and solutions. These young companies are pushing boundaries in both hardware and software innovation.</p>
+            <a href="https://www.analyticsinsight.net/tech-news/top-10-quantum-computing-startups-to-watch-in-2025/" class="btn btn-primary" target="_blank">Discover More</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 24, 2025
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 4: Top 5 Quantum Computing Platforms -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Top 5 Quantum Computing Platforms to Explore</h5>
+            <p class="card-text">Get to know the top quantum computing platforms like Qiskit, D-Wave, Cirq, and more. These platforms provide tools to program and simulate quantum circuits, accelerating research and development.</p>
+            <a href="https://medium.com/the-research-nest/top-frameworks-to-explore-quantum-computing-2485c678a15a" class="btn btn-primary" target="_blank">Learn More</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 23, 2025
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 5: What is Quantum Computing? -->
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">What is Quantum Computing? A Beginner's Guide</h5>
+            <p class="card-text">Quantum computing is poised to revolutionize industries from cryptography to materials science. In this post, we break down the basics of quantum computing and its potential applications.</p>
+            <a href="https://medium.com/@qcgiitr/beginners-guide-to-quantum-computing-f9059a4ac9a" class="btn btn-primary" target="_blank">Get Started</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 22, 2025
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Qu Code. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dark Mode Toggle Function
+    function toggleDarkMode() {
+      const body = document.body;
+      const cardElements = document.querySelectorAll('.card');
+      const sectionTitles = document.querySelectorAll('.section-title');
+      const resourceCategories = document.querySelectorAll('.resource-category');
+      const navbar = document.querySelector('.navbar');
+      const footer = document.querySelector('.footer');
+      
+      body.classList.toggle('dark-mode');
+      navbar.classList.toggle('dark-mode');
+      footer.classList.toggle('dark-mode');
+      sectionTitles.forEach(title => title.classList.toggle('dark-mode'));
+      resourceCategories.forEach(category => category.classList.toggle('dark-mode'));
+      cardElements.forEach(card => card.classList.toggle('dark-mode'));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuCode Blog</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    header {
+      background-color: #343a40;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .card-text {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .card-footer {
+      background-color: #f8f9fa;
+      border-top: 1px solid #ddd;
+      text-align: right;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border: none;
+    }
+
+    #postsContainer {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    #new-post {
+      margin-top: 40px;
+    }
+
+    #new-post form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #new-post h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #new-post .form-control {
+      font-size: 1.1rem;
+      padding: 15px;
+    }
+
+    #new-post .btn-primary {
+      width: 100%;
+      padding: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Qu Code Blog</h1>
+    <p>Your daily dose of quantum knowledge</p>
+  </header>
+
+  <main class="container my-5">
+    <!-- Blog Posts -->
+    <section id="blog-posts">
+      <h2 class="text-center mb-4">Recent Posts</h2>
+      <div id="postsContainer" class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Blog Post 1: Top 5 Quantum Computing Companies -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Top 5 Quantum Computing Companies You Should Know About</h5>
+              <p class="card-text">These companies are at the forefront of the quantum revolution, pushing the boundaries of computation. Learn about their breakthroughs in quantum hardware, software, and applications.</p>
+              <a href="https://www.forbes.com/sites/technology/article/top-quantum-computing-companies/" class="btn btn-primary" target="_blank">Quantum Computing Companies</a>
+            </div>
+            <div class="card-footer text-muted text-end">
+              Posted on January 26, 2025
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 2: Top 5 Universities with Quantum Courses -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Top 5 Universities Offering Quantum Computing Courses</h5>
+              <p class="card-text">Explore the best universities worldwide that offer cutting-edge quantum computing courses and research programs. These institutions are shaping the next generation of quantum scientists.</p>
+              <a href="https://thequantuminsider.com/2022/04/18/the-worlds-top-12-quantum-computing-research-universities/" class="btn btn-primary" target="_blank">Quantum Computing Program</a>
+            </div>
+            <div class="card-footer text-muted text-end">
+              Posted on January 25, 2025
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 3: Quantum Computing Startups -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Emerging Quantum Computing Startups to Watch</h5>
+              <p class="card-text">Learn about the startups that are pioneering new quantum technologies and solutions. These young companies are pushing boundaries in both hardware and software innovation.</p>
+              <a href="https://www.analyticsinsight.net/tech-news/top-10-quantum-computing-startups-to-watch-in-2025#:~:text=Top%2010%20Quantum%20Computing%20Startups%20to%20Watch%20in,Quantum%20...%208%208.%20Classiq%20...%20More%20items" class="btn btn-primary" target="_blank">Quantum Computing Startups</a>
+            </div>
+            <div class="card-footer text-muted text-end">
+              Posted on January 24, 2025
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 4: Top 5 Quantum Computing Platforms -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Top 5 Quantum Computing Platforms to Explore</h5>
+              <p class="card-text">Get to know the top quantum computing platforms like Qiskit, D-Wave, Cirq, and more. These platforms provide tools to program and simulate quantum circuits, accelerating research and development.</p>
+              <a href="https://medium.com/the-research-nest/top-frameworks-to-explore-quantum-computing-2485c678a15a" class="btn btn-primary" target="_blank">Explore Quantum Computing Platform</a>
+            </div>
+            <div class="card-footer text-muted text-end">
+              Posted on January 23, 2025
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Post 5: What is Quantum Computing? -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">What is Quantum Computing? A Beginner's Guide</h5>
+              <p class="card-text">Quantum computing is poised to revolutionize industries from cryptography to materials science. In this post, we break down the basics of quantum computing and its potential applications.</p>
+              <a href="https://medium.com/@qcgiitr/beginners-guide-to-quantum-computing-f9059a4ac9a" class="btn btn-primary" target="_blank">Learn more about Quantum Computing</a>
+            </div>
+            <div class="card-footer text-muted text-end">
+              Posted on January 22, 2025
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add New Post Section -->
+    <section id="new-post" class="mb-5">
+      <h2 class="text-center">Add a New Blog Post</h2>
+      <form id="blogForm" class="mt-4">
+        <div class="mb-3">
+          <label for="title" class="form-label">Post Title</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter blog post title" required>
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Post Content</label>
+          <textarea class="form-control" id="content" rows="5" placeholder="Write your blog post here..." required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Publish</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Qu Code © 2025 | Sharing Quantum Knowledge</p>
+  </footer>
+
+  <script>
+    document.getElementById('blogForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form values
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('content').value;
+
+      // Create a new blog post element
+      const post = document.createElement('div');
+      post.className = 'col';
+      post.innerHTML = `
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">${title}</h5>
+            <p class="card-text">${content}</p>
+          </div>
+          <div class="card-footer text-muted text-end">
+            Posted on ${new Date().toLocaleDateString()}
+          </div>
+        </div>
+      `;
+
+      // Add the new post to the posts container
+      document.getElementById('postsContainer').prepend(post);
+
+      // Clear the form
+      document.getElementById('blogForm').reset();
+    });
+  </script>
+</body>
+</html>
