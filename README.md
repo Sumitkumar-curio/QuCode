@@ -7,10 +7,11 @@ Welcome to QuCode! This website is dedicated to providing resources and blogs re
 - **Recent Blog Posts**: Keep up with the latest posts in quantum computing, from top companies to the best universities.
 - **Dark Mode**: Toggle between light and dark modes for a better browsing experience.
 - **Social Media Links**: Connect with us on our social media platforms.
-
+##Author
+Sumit Kumar : Github Sumitkumar-curio
 ## Acknowledgements:
 PS
-**Dribble** for providing the amazing design of the website. Special thanks to **Nasim** **Saurabh13042004** Github Profile Link - Saurabh13042004
+**Dribble** for providing the amazing design of the website. Special thanks to **Nasim** and **Saurabh** Github Profile Link - Saurabh13042004
 
 ## Work in Progress:
 This website is still a work in progress, with more features and improvements to come. Stay tuned!
